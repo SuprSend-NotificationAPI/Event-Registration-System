@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stock Alerts</title>
+  <style>
+    h1{
+       text-align: center;
+       margin-bottom: 100px;
+    }
+    body {
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: -webkit-linear-gradient(90deg, #8261f7c9 20%, #5697ff5a 80%);
+      min-height: 100%;
+    }
+    .input-group input,
+    .input-group select,
+    .input-group textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      margin-bottom: 30px;
+    }
+    form {
+      margin: auto;
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      width: 400px;
+      padding: 30px;
+      padding-right: 40px;
+      background-color: #f9f9f9;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    button{
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      background-color: #4d72eb;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+  </style>
+
+</head>
+<body>
+  <h1>Broadcast Message</h1>
+  <form id="notification-form" action="/sendbroadcast" method="post">
+    <div class="input-group">
+      <label for="message">Enter Custom Message for Users</label>
+      <textarea type="textarea" id="message" name="message"></textarea>
+    </div>
+    <div class="input-group">
+      <label for="Key">Unique Code:</label>
+      <input type="text" id="Key" name="key" required>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>

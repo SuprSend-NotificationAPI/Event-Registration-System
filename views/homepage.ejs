@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Registration System</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="form">
+      <h1>Event Registration System</h1>
+      <form action="/send-otp" method="POST">
+
+        <div class="form-group">
+          <label for="user_id">User email ID:</label>
+          <input type="text" id="user_id" name="user_id" placeholder="Your id" required>
+        </div>
+
+        <div class="form-group">
+         <label for="phone">Phone:</label>
+         <input type="tel" id="phone" placeholder="+9112345678" name="phone" required>
+        </div>
+
+        <div class="form-group">
+         <label for="Name">Name:</label>
+         <input type="text" id="name" placeholder="Your name" name="name">
+        </div>
+
+
+        <div class="form-group">
+          <label for="Date">Book for Date</label>
+          <input type="date" id="date" name="date" placeholder="04/07/2023">
+        </div>
+
+        <div class="form-group">
+          <input type="submit" value="Submit">
+        </div>
+      </form>
+    </div>
+        <a href="/add-passcode" class="button button-tenants">Broadcast message</a>
+  </div>
+    <div class="container3">
+    <a class="github" href="https://github.com/SuprSend-NotificationAPI/white-labelled-notification"  target="_blank"></a>
+    <a class="suprsend" href="https://www.suprsend.com"  target="_blank"></a>
+   </div>  
+</body>
+</html>

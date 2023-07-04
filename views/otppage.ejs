@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+  
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+  
+    h1 {
+      text-align: center;
+    }
+  
+    .otp-input {
+      text-align: center;
+      margin-top: 20px;
+    }
+  
+    .otp-input input {
+      width: 200px;
+      height: 35px;
+      text-align: center;
+      font-size: 18px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    
+    .submit-btn {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Enter OTP</h1>
+    <form action="/otpverify" method="post">
+      <div class="otp-input">
+        <input name = "otp" type="text" pattern="[0-9]{6}" maxlength="6" required />
+      </div>
+      <input type="hidden" name="name" value=<%=name%> />
+      <input type="hidden" name="phone" value=<%=phone%> />
+      <input type="hidden" name="date" value=<%=date%> />
+      <div class="submit-btn"> 
+        <button type="submit" name="button" value=<%=user_id%>>Submit</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
