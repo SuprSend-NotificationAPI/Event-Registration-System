@@ -82,7 +82,6 @@ app.post("/send-otp",(req,res)=>{
 
 app.post("/otpverify",(req,res)=>{
     const {otp,button,name,phone,date} = req.body;
-    console.log(otp,button,name,phone,date);
     const email = button;
     if(otp!=finalotp){
         res.render("failure");
@@ -138,7 +137,7 @@ app.post("/sendbroadcast",(req,res)=>{
 })
 
 app.post("/failure",(req,res)=>{
-    res.render("otppage");
+    res.redirect("/");
 })
 
 app.listen(3000,()=>{
